@@ -1,7 +1,6 @@
 package app.weather.home.entity;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -23,8 +22,8 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @EqualsAndHashCode(of = { "id" })
 @MappedSuperclass
-public class BaseEntity implements Serializable{
-	
+public class BaseEntity implements Serializable {
+
 	private static final long serialVersionUID = 7282814123460958019L;
 
 	@Id

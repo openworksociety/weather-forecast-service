@@ -1,7 +1,6 @@
 package app.weather.home.entity;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,18 +18,14 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "DAILY_WEATHER_INFO")
-public class DailyWeatherInfo extends BasicWeatherInfoEntity {
+@Table(name = "HOURLY_WEATHER_INFO")
+public class HourlyWeatherInfo extends BasicWeatherInfoEntity {
 
-	private static final long serialVersionUID = 2351535494455423506L;
+	private static final long serialVersionUID = 7425121459537204850L;
 
 	@Column(name = "DATE")
 	private LocalDate date;
 
-	@Column(name = "SUNRISE_TIME")
-	private LocalTime sunriseTime;
-
-	@Column(name = "SUNSET_TIME")
-	private LocalTime sunsetTime;
-
+	@Column(name = "HOUR_COUNT")
+	private Integer hourCount;
 }
